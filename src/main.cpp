@@ -29,11 +29,9 @@ void loop() {
   if (currentMillis - previousMillis >= interval){
 
     DateTime formattedTime = getTime();
-    SensorData sensorData = measureTempAndHumid();
-
+    SensorData sensorData = measureTempAndHumid(true);
     sendToLCD(("T:" + String(sensorData.temperature) + "-"+"H:" + String(sensorData.humidity)).c_str(),
-              String(formattedTime.formattedTime).c_str());   
-
+              String(formattedTime.formattedTime).c_str());    
     esp_arduion_sheet((formattedTime.formattedTime).c_str(), sensorData.temperature, sensorData.humidity);
 
     //sendSensDataToSheets(sensorData.temperature, sensorData.humidity);

@@ -7,8 +7,8 @@ LiquidCrystal_I2C lcd(0x27, 16, 2);
 void lcd_init() {
     lcd.init();
     lcd.begin(16, 2);
-    lcd.backlight(); // Make sure backlight is on
-    lcd.print("Hello, LCD!");
+    lcd.backlight(); // Turn on backlight 
+    lcd.print("Loading....");
 }
 
 // send data to LCD display

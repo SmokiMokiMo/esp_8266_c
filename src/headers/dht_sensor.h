@@ -14,6 +14,6 @@ struct SensorData {
 extern DHT dht;  // Declare the DHT instance
 
 void dht_init();
-SensorData measureTempAndHumid();
+SensorData measureTempAndHumid(bool lcdMesSend = false);
 
 #endif // TIME_H
